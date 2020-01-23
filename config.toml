@@ -1,0 +1,17 @@
+compile_sass = true
+title = "nasm-theme"
+description = ""
+
+taxonomies = [
+    {name = "categories", rss = true},
+    {name = "tags", rss = true},
+]
+
+[extra]
+author = "Lucas"
+nasm_menu = [
+    {url = "$BASE_URL", name = "Home"},
+    {url = "$BASE_URL/categories", name = "Categories"},
+    {url = "$BASE_URL/tags", name = "Tags"},
+]
+nasm_title = "My blog"
