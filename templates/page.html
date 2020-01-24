@@ -1,36 +1,29 @@
 {% extends "index.html" %}
 {% import "post_macros.html" as post_macros %}
 
-{% block content %}
 
-<article  itemscope itemtype="http://schema.org/BlogPosting">
+{% block content %}
+{% block header %}
+{{ super() }}
+{% endblock header %}
+<article class="postread"  itemscope itemtype="http://schema.org/BlogPosting">
     <header>
         <h1 itemprop="headline">{{ page.title }}</h1>
         <span class="muted">{{ post_macros::meta(page=page) }}</span>
     </header>
-    <div  itemprop="articleBody">
-      {{ page.content | safe }}
-    </div>
-
-    {% block page_footer %}
-        <footer >
-            <hr>
-            <p>
-                {% if config.extra.author %}
-                    Published by {{ config.extra.author }}
-                {% endif %}
-                {% if page.taxonomies.categories %}
+    <span class="linkstags">
+     {% if page.taxonomies.categories %}
                     {% set category = page.taxonomies.categories[0] %}
-                    in <a href="{{ get_taxonomy_url(kind="categories", name=category) | safe }}">{{ category }}</a>
+                    <i class="fas fa-folder-open"></i> <a href="{{ get_taxonomy_url(kind="categories", name=category) | safe }}">{{ category }} </a>
                 {% endif %}
                 {% if page.taxonomies.tags %}
-                    and tagged
+                <i class="fas fa-tag"></i> 
                     {% for tag in page.taxonomies.tags %}
                         <a href="{{ get_taxonomy_url(kind="tags", name=tag) | safe }}">{{ tag }}</a>
                         {% if page.taxonomies.tags | length > 1 %}
                             {% if loop.index != page.taxonomies.tags | length %}
                                 {% if loop.index == page.taxonomies.tags | length - 1 %}
-                                    and
+                                    e
                                 {% else %}
                                     ,
                                 {% endif %}
@@ -38,10 +31,67 @@
                         {% endif %}
                     {% endfor %}
                 {% endif %}
-            </p>
+    </span>
+    <div  itemprop="articleBody">
+      {{ page.content | safe }}
+      <div id="disqus_thread"></div>
+
+    </div>
+
+    {% block page_footer %}
+        <footer class="linkstags">
+            <hr>
+            <span>
+                {% if config.extra.author %}
+                    Publicado por {{ config.extra.author }}
+                {% endif %}
+                {% if page.taxonomies.categories %}
+                    {% set category = page.taxonomies.categories[0] %}
+                    em <a href="{{ get_taxonomy_url(kind="categories", name=category) | safe }}">{{ category }}</a>
+                {% endif %}
+            </span>
+                <span>
+                {% if page.taxonomies.tags %}
+                    <b>Tags </b>[
+                    {% for tag in page.taxonomies.tags %}
+                        <a href="{{ get_taxonomy_url(kind="tags", name=tag) | safe }}">{{ tag }}</a>
+                        {% if page.taxonomies.tags | length > 1 %}
+                            {% if loop.index != page.taxonomies.tags | length %}
+                                {% if loop.index == page.taxonomies.tags | length - 1 %}
+                                    e
+                                {% else %}
+                                    ,
+                                {% endif %}
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                        ]
+                </span>
+                {% endif %}
         </footer>
     {% endblock page_footer %}
 </article>
+{%if config.extra.disqus_username%}
+<script>
 
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    
+    var disqus_config = function () {
+    this.page.url = '{{ page.permalink | safe }}';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = '{{ page.title }}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    
+    s.src = 'https://{{ config.extra.disqus_username }}.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+{% endif %}
 {% endblock content %}
 

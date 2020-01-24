@@ -17,6 +17,8 @@
 
       {% block css %}
           <link rel="stylesheet" href="{{ get_url(path="site.css", trailing_slash=false) | safe }}">
+          <link rel="stylesheet" href="{{ get_url(path="all.min.css", trailing_slash=false) | safe }}">
+
       {% endblock css %}
 
       {% block extra_head %}
@@ -26,13 +28,15 @@
     <body>
         {% block content %}
             {% block header %}
+            
                 {% if config.extra.nasm_menu %}
                     <header>
-                        <nav itemscope itemtype="http://schema.org/SiteNavigationElement">
+                        <nav class="navbar" itemscope itemtype="http://schema.org/SiteNavigationElement">
                         {% for item in config.extra.nasm_menu %}
                             <a itemprop="url"
                                class="{% if item.url | replace(from="$BASE_URL", to=config.base_url) == current_url %}active{% endif %}"
                                href="{{ item.url | safe | replace(from="$BASE_URL", to=config.base_url) }}">
+                               <i class="{{item.fawesome}}"></i>
                                 <span itemprop="name">{{ item.name }}
                                 </span></a>
                         {% endfor %}
@@ -43,14 +47,21 @@
 
             <main class="content">
                 {% if config.extra.nasm_title %}
-                    <header>
-                        <h1>{{ config.extra.nasm_title }}</h1>
+                    <header class="name-blog">
+                        <h2>{{ config.extra.nasm_title }}</h2>
                     </header>
                 {% endif %}
-                {% for page in paginator.pages %}
-                    {{ post_macros::page_in_list(page=page) }}
-                {% endfor %}
+                
 
+                {% for page in paginator.pages %}
+                  {% if page.date %}
+
+                <div class="posts">
+                    {{ post_macros::page_in_list(page=page) }}
+                  </div>
+                  {% endif %}
+                {% endfor %}
+                
                 <nav>
                   <p>
                     {% if paginator.previous %}
