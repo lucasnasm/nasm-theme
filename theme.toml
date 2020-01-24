@@ -1,18 +1,18 @@
-name = "after-dark"
-description = "A robust, elegant dark theme"
+name = "nasm-theme"
+description = "A robust, elegant blue theme"
 license = "MIT"
-homepage = "https://github.com/getzola/after-dark"
-min_version = "0.5.0"
-demo = "https://zola-after-dark.netlify.com"
+homepage = "https://github.com/lucasnasm/nasm-theme"
+min_version = "0.1.0"
+demo = "https://lucasnasm.github.io"
 
 [extra]
 
 
 [author]
-name = "Vincent Prouillet"
-homepage = "https://www.vincentprouillet.com"
+name = "Francisco Lucas"
+homepage = "https://lucasnasm.github.io"
 
 [original]
-author =  "comfusion"
-homepage = "https://git.habd.as/comfusion/after-dark/"
-repo = "https://git.habd.as/comfusion/after-dark/"
+name = "Vincent Prouillet"
+homepage = "https://www.vincentprouillet.com"
+repo = "https://github.com/getzola/after-dark/"

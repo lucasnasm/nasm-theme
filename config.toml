@@ -13,9 +13,9 @@ author = "Lucas"
 disqus_username = ""
 nasm_menu = [
     {url = "$BASE_URL", name = "Home", fawesome = "fas fa-home"},
-    {url = "$BASE_URL/categories", name = "Categorias", fawesome = "fas fa-folder-open"},
+    {url = "$BASE_URL/categories", name = "Categories", fawesome = "fas fa-folder-open"},
     {url = "$BASE_URL/tags", name = "Tags", fawesome = "fas fa-tag" },
-    {url = "$BASE_URL/about", name = "Sobre", fawesome = "fas fa-user-alt" },
+    {url = "$BASE_URL/about", name = "About", fawesome = "fas fa-user-alt" },
 
 ]
-nasm_title = "Post recentes"
+nasm_title = "Posts"

@@ -1,9 +1,9 @@
 
 {% macro meta(page) %}
     <div class="post-info">
-    <span> Tempo de leitura: <i class="far fa-clock"></i> {{ page.reading_time }} minutos</span>
+    <span><i class="far fa-clock"></i> {{ page.reading_time }} minute read</span>
     <i class="fas fa-pen"></i>
-    {% if page.date %}Publicado em: {{ page.date | date(format="%d/%m/%Y") }}{% endif %}
+    {% if page.date %}Published: {{ page.date | date(format="%d/%m/%Y") }}{% endif %}
 </div>
 {% endmacro meta %}
 
@@ -16,8 +16,8 @@
                
                 <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
                 <span class="date-post">
-                    <i class="fab fa-readme"></i>{{ page.reading_time }} minutos -
-                    <i class="fas fa-pen"></i>{% if page.date %}Publicado em: {{ page.date | date(format="%d/%m/%Y") }}{% endif %}
+                    <i class="fab fa-readme"></i>{{ page.reading_time }} minute read -
+                    <i class="fas fa-pen"></i>{% if page.date %}Published: {{ page.date | date(format="%d/%m/%Y") }}{% endif %}
 
                 </span>
             </h2>
@@ -27,7 +27,7 @@
         {% if page.summary %}
             <div itemprop="summary">
                 {{ page.summary | safe }}
-                <nav ><a class="readmore" itemprop="url" href="{{ page.permalink | safe }}">Ler mais <i class="fas fa-arrow-right"></i></a></nav>
+                <nav ><a class="readmore" itemprop="url" href="{{ page.permalink | safe }}">Read more <i class="fas fa-arrow-right"></i></a></nav>
             </div>
         {% endif %}
     </article>

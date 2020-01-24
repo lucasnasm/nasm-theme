@@ -43,11 +43,11 @@
             <hr>
             <span>
                 {% if config.extra.author %}
-                    Publicado por {{ config.extra.author }}
+                Published by {{ config.extra.author }}
                 {% endif %}
                 {% if page.taxonomies.categories %}
                     {% set category = page.taxonomies.categories[0] %}
-                    em <a href="{{ get_taxonomy_url(kind="categories", name=category) | safe }}">{{ category }}</a>
+                    in <a href="{{ get_taxonomy_url(kind="categories", name=category) | safe }}">{{ category }}</a>
                 {% endif %}
             </span>
                 <span>
@@ -58,7 +58,7 @@
                         {% if page.taxonomies.tags | length > 1 %}
                             {% if loop.index != page.taxonomies.tags | length %}
                                 {% if loop.index == page.taxonomies.tags | length - 1 %}
-                                    e
+                                    and
                                 {% else %}
                                     ,
                                 {% endif %}
