@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,400i,800&display=swap');
+html {
+    height: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin: 0 auto;
+    font-weight: 400;
+    font-size: 18px;
+    font-family: 'Nunito', sans-serif;
+}
+
+article {
+    line-height: 1.7;
+    color: rgb(65, 65, 65);
+}
+article h2 {
+    color: #2bbc8a;
+    letter-spacing: 0.01em;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.5em;
+    
+  
+}
+article h1 {
+    text-align: center;
+}
+article a {
+    text-decoration: none;
+    color: #005abb;
+    
+
+}
+article a:hover{
+    text-decoration: underline;
+}
+.navbar {
+    text-align: center;
+    font-size: 20px;
+    padding-top: 10px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0052aa;
+}
+.navbar a {
+    text-decoration: none;
+    padding:10px;
+    color: #ffffff;
+    font-weight: 600;
+}
+.posts{
+    margin-bottom: 25px;
+    padding: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 1);
+    -moz-box-shadow:    0px 0px 3px 0px rgba(0, 0, 0, 1);
+    box-shadow:         0px 0px 3px 0px rgba(0, 0, 0, 1);
+}
+.readmore{
+    text-decoration: underline;
+    color: #001933;
+    font-style: italic;
+}
+
+.date-post{
+    font-size: 15px;
+    color: #005abb;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+}
+.date-post i {
+    padding: 5px;
+}
+
+.post-info{
+    font-size: 14px;
+    
+}
+.name-blog{
+    overflow: hidden;
+    text-align: center;
+}
+.name-blog h2 {
+    color: #003166;
+
+}
+.linkstags a{
+    color: #ff570a ;
+}
+
+
+
+@media (max-width: 480px){
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+    .date-post{
+    font-size: 13px;
+    }
+    .posts {
+        border-radius: 0;
+    }
+    .postread {
+        margin: 10px;
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        font-weight: 700;
+    }
+    
+}
