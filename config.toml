@@ -1,6 +1,7 @@
-compile_sass = true
+base_url = "https://lucasnasm.github.io"
+compile_sass = false
 title = "nasm-theme"
-description = ""
+description = "Blog"
 
 taxonomies = [
     {name = "categories", rss = true},
@@ -9,9 +10,12 @@ taxonomies = [
 
 [extra]
 author = "Lucas"
+disqus_username = ""
 nasm_menu = [
-    {url = "$BASE_URL", name = "Home"},
-    {url = "$BASE_URL/categories", name = "Categories"},
-    {url = "$BASE_URL/tags", name = "Tags"},
+    {url = "$BASE_URL", name = "Home", fawesome = "fas fa-home"},
+    {url = "$BASE_URL/categories", name = "Categorias", fawesome = "fas fa-folder-open"},
+    {url = "$BASE_URL/tags", name = "Tags", fawesome = "fas fa-tag" },
+    {url = "$BASE_URL/about", name = "Sobre", fawesome = "fas fa-user-alt" },
+
 ]
-nasm_title = "My blog"
+nasm_title = "Post recentes"
