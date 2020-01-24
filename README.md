@@ -6,13 +6,16 @@
 
 - [nasm-theme](#nasm-theme)
   - [Contents](#contents)
+  - [Contents](#contents-1)
   - [Installation](#installation)
   - [Options](#options)
     - [Disqus](#disqus)
     - [Top-menu](#top-menu)
     - [Title](#title)
   - [Original](#original)
-
+## Contents
+Font Awesome for icons  
+Nunito Font
 ## Installation
 First download this theme to your `themes` directory:
 
