@@ -6,14 +6,14 @@
 
 - [nasm-theme](#nasm-theme)
   - [Contents](#contents)
-  - [Contents](#contents-1)
+  - [Fonts](#Fonts)
   - [Installation](#installation)
   - [Options](#options)
     - [Disqus](#disqus)
     - [Top-menu](#top-menu)
     - [Title](#title)
   - [Original](#original)
-## Contents
+## Fonts
 Font Awesome for icons  
 Nunito Font
 ## Installation
