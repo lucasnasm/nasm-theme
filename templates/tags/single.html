@@ -5,9 +5,12 @@
         {{ super() }}
     {% endblock header %}
 
-    <h1>{{ term.name }}</h1>
+    <h2 class="titles">[ {{ term.name }} ]</h2>
 
     {% for page in term.pages %}
+    <div class="posts">
+
         {{ post_macros::page_in_list(page=page) }}
+    </div>
     {% endfor %}
 {% endblock content %}

@@ -5,12 +5,12 @@
         {{ super() }}
     {% endblock header %}
 
-    <h1>Tags</h1>
+    <h2 class="titles"> [ Tags ] </h2>
 
     {% if terms %}
-        <ul>
+        <ul class="list-tc">
             {% for term in terms %}
-                <li><a href="{{ term.permalink | safe }}">{{ term.name }}</a> ({{ term.pages | length }})</li>
+                <li><span class="fas fa-tag"></span><a href="{{ term.permalink | safe }}">{{ term.name }} </a>  <span class="badge"> ({{ term.pages | length }})</span></li>
             {% endfor %}
         </ul>
     {% endif %}

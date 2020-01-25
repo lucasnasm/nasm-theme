@@ -17,6 +17,7 @@ body {
 article {
     line-height: 1.7;
     color: rgb(65, 65, 65);
+    
 }
 article h2 {
     color: #2bbc8a;
@@ -32,8 +33,9 @@ article h1 {
 }
 article a {
     text-decoration: none;
-    color: #005abb;
-    
+    color: #006ebb;
+    font-weight: 600;
+
 
 }
 article a:hover{
@@ -46,7 +48,8 @@ article a:hover{
     display:flex;
     align-items: center;
     justify-content: center;
-    background-color: #0052aa;
+    background-color: #008cee;
+
 }
 .navbar a {
     text-decoration: none;
@@ -55,23 +58,37 @@ article a:hover{
     font-weight: 600;
 }
 .posts{
+    margin-left:10px;
+    margin-right: 10px;
     margin-bottom: 25px;
     padding: 10px;
-    border-radius: 10px;
-    -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 1);
-    -moz-box-shadow:    0px 0px 3px 0px rgba(0, 0, 0, 1);
-    box-shadow:         0px 0px 3px 0px rgba(0, 0, 0, 1);
+    border: 1px solid #0096ff;
+    
+    box-shadow: 5px 6px 0px #0096ff;
 }
+/*background: #0096ff;*/
 .readmore{
-    text-decoration: underline;
-    color: #001933;
-    font-style: italic;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    text-align: left;
+    
+    letter-spacing: 1px;
+   
+    
 }
+.readmore a {
+    color: #3d74d8;
+    font-weight: bold
+}
+.readmore a:hover {
+    text-decoration: none;
+}
+
 
 .date-post{
     font-size: 15px;
-    color: #005abb;
-    font-style: italic;
+    color: #333333;
+    font-weight: 300;
     display: flex;
     align-items: center;
 }
@@ -83,16 +100,50 @@ article a:hover{
     font-size: 14px;
     
 }
-.name-blog{
+.titles{
     overflow: hidden;
     text-align: center;
 }
-.name-blog h2 {
+.titles h1, h2 {
     color: #003166;
 
 }
+
+.list-tc {
+    
+    list-style: none;
+}
+.list-tc li {
+    padding: 3px;
+}
+.list-tc li a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 2px;
+  
+}
+.badge{
+    padding: .10em .5em;
+    font-size: 75%;
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    color: #fff;
+    background-color: #4470ff;
+    border-radius: .25rem;
+}
+/* color: #ff570a ;*/
 .linkstags a{
-    color: #ff570a ;
+    font-weight: 600;
+    color: #39739d;
+    background-color: #e1ecf4;
+    border-color: #e1ecf4;
+    border-radius: 5px;
+    padding: 2px;
+    
 }
 
 
@@ -116,5 +167,6 @@ article a:hover{
         flex-direction: column;
         font-weight: 700;
     }
+
     
 }
