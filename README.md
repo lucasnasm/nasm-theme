@@ -1,12 +1,18 @@
 # nasm-theme
 
-![nasm-theme screenshot](https://github.com/lucasnasm/nasm-theme/blob/master/screenshot.png?raw=true)
+## Web
+![nasm-theme web](https://github.com/lucasnasm/nasm-theme/blob/master/screenshot-web.png?raw=true)
+
+## Mobile
+![nasm-theme mobile](https://github.com/lucasnasm/nasm-theme/blob/master/screenshot-moible.png?raw=true)
 
 ## Contents
 
 - [nasm-theme](#nasm-theme)
+  - [Web](#web)
+  - [Mobile](#mobile)
   - [Contents](#contents)
-  - [Fonts](#Fonts)
+  - [Fonts](#fonts)
   - [Installation](#installation)
   - [Options](#options)
     - [Disqus](#disqus)
