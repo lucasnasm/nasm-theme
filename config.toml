@@ -2,6 +2,8 @@ base_url = "https://lucasnasm.github.io"
 compile_sass = false
 title = "nasm-theme"
 description = "Blog"
+build_search_index = true
+default_language = "pt"
 
 taxonomies = [
     {name = "categories", rss = true},
@@ -11,6 +13,7 @@ taxonomies = [
 [extra]
 author = "Lucas"
 disqus_username = ""
+ganalytics = ""
 nasm_menu = [
     {url = "$BASE_URL", name = "Home", fawesome = "fas fa-home"},
     {url = "$BASE_URL/categories", name = "Categories", fawesome = "fas fa-folder-open"},
