@@ -4,7 +4,7 @@
 ![nasm-theme web](https://github.com/lucasnasm/nasm-theme/blob/master/screenshot-web.png?raw=true)
 
 ## Mobile
-![nasm-theme mobile](https://github.com/lucasnasm/nasm-theme/blob/master/screenshot-moible.png?raw=true)
+![nasm-theme mobile](https://github.com/lucasnasm/nasm-theme/blob/master/screenshot-mobile.png?raw=true)
 
 ## Contents
 
