@@ -1,7 +1,7 @@
 # nasm-theme
 
 ## Web
-![nasm-theme web](https://github.com/lucasnasm/nasm-theme/blob/master/screenshot-web.png?raw=true)
+![nasm-theme web](screenshot.png)
 
 ## Mobile
 ![nasm-theme mobile](https://github.com/lucasnasm/nasm-theme/blob/master/screenshot-mobile.png?raw=true)
