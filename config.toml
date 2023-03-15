@@ -2,7 +2,7 @@ base_url = "https://lucasnasm.github.io"
 compile_sass = false
 title = "nasm-theme"
 description = "Blog"
-build_search_index = true
+build_search_index = false
 default_language = "pt"
 
 taxonomies = [
